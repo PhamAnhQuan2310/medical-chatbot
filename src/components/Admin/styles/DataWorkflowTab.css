@@ -1,0 +1,13 @@
+/* DataWorkflowTab.css */
+.admin-workflow-container {
+  width: 100%;
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+}
+
+.reactflow-wrapper {
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+}

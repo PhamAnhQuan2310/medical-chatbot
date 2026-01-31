@@ -1,0 +1,80 @@
+/* diseasedetect.css */
+.container-detect {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.detect-wrapper {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.detect-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.upload-section {
+  border: 2px dashed #999;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  background: #fafafa;
+}
+
+.upload-section input {
+  margin-top: 10px;
+}
+
+.preview-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.preview-img {
+  max-width: 280px;
+  max-height: 280px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.detect-button {
+  margin-top: 20px;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.detect-button:disabled {
+  background-color: #9abfff;
+}
+
+.result-box {
+  margin-top: 25px;
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.result-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.result-line {
+  margin: 6px 0;
+  font-size: 15px;
+}

@@ -1,0 +1,28 @@
+{
+  "id": "workflow_2c9c8090",
+  "name": "Test",
+  "nodes": [
+    {
+      "id": "InputNode_1750820489464",
+      "type": "customNode",
+      "position": {
+        "x": 165.23077392578125,
+        "y": 72.23077392578125
+      },
+      "data": {
+        "label": "Đầu vào",
+        "nodeType": "InputNode",
+        "parameters": {
+          "default_value": "0"
+        }
+      },
+      "width": 152,
+      "height": 63,
+      "selected": true,
+      "dragging": false
+    }
+  ],
+  "edges": [],
+  "created_at": "2025-06-25T10:01:39.231973",
+  "updated_at": "2025-06-25T10:01:39.231973"
+}

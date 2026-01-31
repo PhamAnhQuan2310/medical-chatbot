@@ -1,0 +1,91 @@
+{
+  "id": "workflow_f6a135da",
+  "name": "Workflow của Hiếu",
+  "nodes": [
+    {
+      "id": "InputNode_1750846470688",
+      "type": "customNode",
+      "position": {
+        "x": 138.30242313058022,
+        "y": -17.486148297991065
+      },
+      "data": {
+        "label": "Đầu vào",
+        "nodeType": "InputNode",
+        "parameters": {}
+      },
+      "width": 152,
+      "height": 63,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 138.30242313058022,
+        "y": -17.486148297991065
+      },
+      "dragging": false
+    },
+    {
+      "id": "RAGNode_1750846478514",
+      "type": "customNode",
+      "position": {
+        "x": 351.01099455915164,
+        "y": -22.213005440848235
+      },
+      "data": {
+        "label": "RAG",
+        "nodeType": "RAGNode",
+        "parameters": {}
+      },
+      "width": 152,
+      "height": 63,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 351.01099455915164,
+        "y": -22.213005440848235
+      },
+      "dragging": false
+    },
+    {
+      "id": "OutputNode_1750846482939",
+      "type": "customNode",
+      "position": {
+        "x": 563.7195659877231,
+        "y": -12.759291155133923
+      },
+      "data": {
+        "label": "Đầu ra",
+        "nodeType": "OutputNode",
+        "parameters": {}
+      },
+      "width": 152,
+      "height": 63,
+      "selected": false,
+      "positionAbsolute": {
+        "x": 563.7195659877231,
+        "y": -12.759291155133923
+      },
+      "dragging": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "InputNode_1750846470688",
+      "sourceHandle": "output",
+      "target": "RAGNode_1750846478514",
+      "targetHandle": "input",
+      "id": "reactflow__edge-InputNode_1750846470688output-RAGNode_1750846478514input",
+      "selected": false,
+      "label": "Tra cứu"
+    },
+    {
+      "source": "RAGNode_1750846478514",
+      "sourceHandle": "output",
+      "target": "OutputNode_1750846482939",
+      "targetHandle": "input",
+      "id": "reactflow__edge-RAGNode_1750846478514output-OutputNode_1750846482939input",
+      "selected": false,
+      "label": "Xử lý"
+    }
+  ],
+  "created_at": "2025-06-25T17:15:54.860332",
+  "updated_at": "2025-06-25T17:15:54.860332"
+}

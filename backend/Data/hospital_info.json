@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "category": "procedure",
+    "question": "Quy trình đăng ký khám bệnh là gì?",
+    "answer": "Để đăng ký khám bệnh, bệnh nhân cần đến quầy tiếp nhận tại tầng 1, xuất trình CMND/CCCD hoặc thẻ BHYT, điền thông tin vào phiếu đăng ký, chọn chuyên khoa, và nhận số thứ tự khám. Thời gian tiếp nhận từ 7:00 đến 17:00 hàng ngày."
+  },
+  {
+    "id": 2,
+    "category": "procedure",
+    "question": "Làm thế nào để đặt lịch khám bệnh?",
+    "answer": "Bệnh nhân có thể đặt lịch khám qua ứng dụng di động của bệnh viện, gọi hotline 19001234, hoặc truy cập website www.hospital.vn. Đặt lịch trước giúp giảm thời gian chờ đợi."
+  },
+  {
+    "id": 3,
+    "category": "procedure",
+    "question": "Thủ tục nhập viện như thế nào?",
+    "answer": "Bệnh nhân cần có chỉ định nhập viện từ bác sĩ, đến quầy tiếp nhận nhập viện, cung cấp giấy tờ tùy thân và thẻ BHYT (nếu có), sau đó hoàn tất thủ tục thanh toán tạm ứng và nhận phòng bệnh."
+  },
+  {
+    "id": 4,
+    "category": "procedure",
+    "question": "Cách thanh toán viện phí ra sao?",
+    "answer": "Viện phí có thể được thanh toán bằng tiền mặt, thẻ ngân hàng, hoặc qua ứng dụng thanh toán di động tại quầy thu ngân. Bệnh nhân có BHYT sẽ được hỗ trợ thanh toán theo quy định bảo hiểm."
+  },
+  {
+    "id": 5,
+    "category": "procedure",
+    "question": "Làm thế nào để lấy kết quả xét nghiệm?",
+    "answer": "Kết quả xét nghiệm được trả tại quầy tiếp nhận hoặc qua ứng dụng bệnh viện. Bệnh nhân cần cung cấp mã hồ sơ hoặc CMND/CCCD để nhận kết quả. Thời gian trả kết quả thường từ 1-3 ngày tùy loại xét nghiệm."
+  },
+  {
+    "id": 6,
+    "category": "procedure",
+    "question": "Quy trình khám sức khỏe định kỳ là gì?",
+    "answer": "Bệnh nhân đăng ký gói khám sức khỏe tại quầy tiếp nhận hoặc qua website, chọn ngày khám, thực hiện các xét nghiệm và kiểm tra theo gói (ví dụ: xét nghiệm máu, siêu âm, X-quang), sau đó nhận tư vấn từ bác sĩ."
+  },
+  {
+    "id": 7,
+    "category": "general",
+    "question": "Bệnh viện có những chuyên khoa nào?",
+    "answer": "Bệnh viện có các chuyên khoa chính: Nội khoa, Nhi khoa, Sản khoa, Ngoại khoa, Tai mũi họng, Mắt, Răng hàm mặt, Da liễu, và Tâm thần học."
+  },
+  {
+    "id": 8,
+    "category": "general",
+    "question": "Giờ làm việc của bệnh viện là khi nào?",
+    "answer": "Bệnh viện hoạt động từ 7:00 sáng đến 17:00 chiều, từ thứ Hai đến thứ Bảy. Khoa cấp cứu hoạt động 24/7."
+  },
+  {
+    "id": 9,
+    "category": "general",
+    "question": "Bệnh viện có hỗ trợ bảo hiểm y tế không?",
+    "answer": "Có, bệnh viện hỗ trợ thanh toán qua bảo hiểm y tế (BHYT) theo quy định của Bộ Y tế. Bệnh nhân cần mang theo thẻ BHYT và giấy tờ tùy thân hợp lệ."
+  },
+  {
+    "id": 10,
+    "category": "general",
+    "question": "Bệnh viện có dịch vụ khám tại nhà không?",
+    "answer": "Hiện tại, bệnh viện chưa cung cấp dịch vụ khám tại nhà. Tuy nhiên, bạn có thể sử dụng dịch vụ tư vấn y tế từ xa qua hotline hoặc ứng dụng bệnh viện."
+  },
+  {
+    "id": 11,
+    "category": "general",
+    "question": "Bệnh viện có bãi đỗ xe không?",
+    "answer": "Có, bệnh viện có bãi đỗ xe miễn phí cho bệnh nhân và người nhà tại tầng hầm và khu vực phía sau tòa nhà chính."
+  },
+  {
+    "id": 12,
+    "category": "procedure",
+    "question": "Làm thế nào để chuyển viện?",
+    "answer": "Bệnh nhân cần liên hệ bác sĩ điều trị để được cấp giấy chuyển viện. Sau đó, đến quầy tiếp nhận để hoàn tất thủ tục hành chính và nhận hồ sơ chuyển viện."
+  },
+  {
+    "id": 13,
+    "category": "general",
+    "question": "Bệnh viện có cung cấp dịch vụ tiêm chủng không?",
+    "answer": "Có, bệnh viện cung cấp dịch vụ tiêm chủng cho trẻ em và người lớn, bao gồm vắc-xin phòng cúm, viêm gan B, và các vắc-xin theo chương trình quốc gia."
+  },
+  {
+    "id": 14,
+    "category": "procedure",
+    "question": "Quy trình xuất viện là gì?",
+    "answer": "Bệnh nhân nhận giấy xuất viện từ bác sĩ, hoàn tất thanh toán viện phí tại quầy thu ngân, nhận thuốc và hướng dẫn chăm sóc tại nhà từ điều dưỡng."
+  },
+  {
+    "id": 15,
+    "category": "general",
+    "question": "Bệnh viện có phòng khám VIP không?",
+    "answer": "Có, bệnh viện có phòng khám VIP với dịch vụ ưu tiên, không gian riêng tư, và bác sĩ chuyên môn cao. Liên hệ quầy tiếp nhận để biết thêm chi tiết."
+  },
+  {
+    "id": 16,
+    "category": "general",
+    "question": "Bệnh viện có hỗ trợ tư vấn y tế từ xa không?",
+    "answer": "Có, bệnh viện cung cấp dịch vụ tư vấn y tế từ xa qua ứng dụng di động hoặc hotline 19001234, từ 8:00 đến 20:00 hàng ngày."
+  },
+  {
+    "id": 17,
+    "category": "procedure",
+    "question": "Làm thế nào để yêu cầu sao y hồ sơ bệnh án?",
+    "answer": "Bệnh nhân hoặc người nhà cần đến quầy tiếp nhận, xuất trình giấy tờ tùy thân, điền đơn yêu cầu sao y hồ sơ, và nộp phí dịch vụ. Thời gian xử lý thường là 3-5 ngày làm việc."
+  },
+  {
+    "id": 18,
+    "category": "general",
+    "question": "Bệnh viện có nhà thuốc không?",
+    "answer": "Có, nhà thuốc bệnh viện nằm tại tầng 1, cung cấp thuốc theo toa bác sĩ và một số thuốc không kê đơn, hoạt động từ 7:00 đến 17:00."
+  },
+  {
+    "id": 19,
+    "category": "general",
+    "question": "Bệnh viện có dịch vụ cấp cứu không?",
+    "answer": "Có, khoa cấp cứu của bệnh viện hoạt động 24/7, với đội ngũ y bác sĩ và xe cứu thương sẵn sàng hỗ trợ mọi lúc."
+  },
+  {
+    "id": 20,
+    "category": "procedure",
+    "question": "Làm thế nào để kiểm tra lịch sử khám bệnh của tôi?",
+    "answer": "Bệnh nhân cần cung cấp mã bệnh nhân hoặc CMND/CCCD tại quầy tiếp nhận để tra cứu lịch sử khám bệnh. Bạn cũng có thể xem qua ứng dụng bệnh viện nếu đã đăng ký tài khoản."
+  },
+  {
+    "id": 21,
+    "category": "general",
+    "question": "Bệnh viện có hỗ trợ bệnh nhân quốc tế không?",
+    "answer": "Có, bệnh viện có đội ngũ phiên dịch viên và dịch vụ hỗ trợ dành riêng cho bệnh nhân quốc tế, bao gồm tiếng Anh, Trung Quốc, và Nhật Bản."
+  },
+  {
+    "id": 22,
+    "category": "general",
+    "question": "Bệnh viện có cung cấp dịch vụ xét nghiệm COVID-19 không?",
+    "answer": "Có, bệnh viện cung cấp xét nghiệm PCR và test nhanh COVID-19. Vui lòng đặt lịch trước qua hotline hoặc website."
+  },
+  {
+    "id": 23,
+    "category": "procedure",
+    "question": "Làm thế nào để đăng ký gói khám sức khỏe doanh nghiệp?",
+    "answer": "Doanh nghiệp cần liên hệ phòng Hành chính qua email contact@hospital.vn hoặc gọi hotline 19001234 để thảo luận về gói khám sức khỏe phù hợp."
+  },
+  {
+    "id": 24,
+    "category": "general",
+    "question": "Bệnh viện có dịch vụ chăm sóc sau sinh không?",
+    "answer": "Có, bệnh viện cung cấp dịch vụ chăm sóc sau sinh tại khoa Sản, bao gồm tư vấn dinh dưỡng, chăm sóc mẹ và bé, và hỗ trợ phục hồi."
+  },
+  {
+    "id": 25,
+    "category": "general",
+    "question": "Làm thế nào để liên hệ với bệnh viện?",
+    "answer": "Bạn có thể liên hệ qua hotline 19001234, email contact@hospital.vn, hoặc đến trực tiếp tại địa chỉ: 123 Đường Bệnh Viện, Quận 1, TP.HCM."
+  }
+]

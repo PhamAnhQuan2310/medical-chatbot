@@ -1,0 +1,260 @@
+.upload-main {
+  position: fixed;
+  top: 70px;
+  left: 300px;
+  right: 0;
+  bottom: 0;
+  padding: 24px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: calc(100vw - 300px);
+}
+
+.upload-header {
+  margin-bottom: 16px;
+}
+
+.upload-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.upload-dropzone {
+  border: 2px dashed #e5e7eb;
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  background: #f9fafb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-dropzone.active {
+  background: linear-gradient(135deg, #e0f2fe, #ffffff);
+  border-color: #3b82f6;
+}
+
+.upload-icon {
+  font-size: 48px;
+  color: #3b82f6;
+  margin-bottom: 12px;
+}
+
+.upload-label {
+  font-size: 16px;
+  color: #1e293b;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.upload-sub-label {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.upload-filelist {
+  margin-top: 16px;
+}
+
+.upload-filelist-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.upload-filelist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.upload-file-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.upload-file-item:hover {
+  background: #edf2f7;
+  border-color: #d1d5db;
+}
+
+.upload-file-name {
+  font-size: 14px;
+  color: #1e293b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.image-preview {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.image-preview img {
+  max-width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.upload-submit-btn {
+  background: linear-gradient(90deg, #3b82f6, #60a5fa);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.upload-submit-btn.primary {
+  margin-top: 12px;
+}
+
+.upload-submit-btn:hover:not(:disabled) {
+  background: linear-gradient(90deg, #60a5fa, #3b82f6);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.upload-submit-btn:disabled {
+  background: #d1d5db;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.thuoc-card {
+  margin-top: 24px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.thuoc-card h3 {
+  margin-bottom: 16px;
+  font-size: 18px;
+  color: #1e293b;
+}
+
+.thuoc-section {
+  margin-bottom: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 4px;
+}
+
+.field input,
+.field textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.15);
+}
+
+.input-main {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.raw-ocr {
+  margin-top: 12px;
+}
+
+.raw-ocr summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+
+.raw-ocr textarea {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.upload-message {
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 12px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.upload-message.success {
+  background: #ecfdf5;
+  color: #059669;
+  border: 1px solid #34d399;
+}
+
+.upload-message.error {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #ef4444;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 900px) {
+  .upload-main {
+    left: 0;
+    width: 100vw;
+    padding: 16px;
+  }
+
+  .upload-filelist-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .upload-dropzone {
+    padding: 30px 16px;
+  }
+
+  .field-row {
+    grid-template-columns: 1fr;
+  }
+}

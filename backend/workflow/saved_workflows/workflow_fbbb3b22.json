@@ -1,0 +1,184 @@
+{
+  "id": "workflow_fbbb3b22",
+  "name": "Xử lý dữ liệu",
+  "nodes": [
+    {
+      "id": "data-input",
+      "type": "customNode",
+      "position": {
+        "x": 60.32457142857129,
+        "y": 324.57188571428566
+      },
+      "data": {
+        "label": "Dữ liệu",
+        "nodeType": "InputNode",
+        "parameters": {}
+      },
+      "width": 152,
+      "height": 63,
+      "selected": true,
+      "positionAbsolute": {
+        "x": 60.32457142857129,
+        "y": 324.57188571428566
+      },
+      "dragging": false
+    },
+    {
+      "id": "condition",
+      "type": "customNode",
+      "position": {
+        "x": 350,
+        "y": 100
+      },
+      "data": {
+        "label": "Có phải dạng bảng không?",
+        "nodeType": "ConditionalNode",
+        "parameters": {}
+      },
+      "width": 152,
+      "height": 80
+    },
+    {
+      "id": "no-path",
+      "type": "customNode",
+      "position": {
+        "x": 550,
+        "y": 100
+      },
+      "data": {
+        "label": "Dự đoán ngữ cảnh",
+        "nodeType": "IntentClassifierNode",
+        "parameters": {}
+      },
+      "width": 152,
+      "height": 63
+    },
+    {
+      "id": "yes-path",
+      "type": "customNode",
+      "position": {
+        "x": 350,
+        "y": 250
+      },
+      "data": {
+        "label": "Dự đoán ngữ cảnh",
+        "nodeType": "IntentClassifierNode",
+        "parameters": {}
+      },
+      "width": 152,
+      "height": 63
+    },
+    {
+      "id": "vector-db-top",
+      "type": "customNode",
+      "position": {
+        "x": 750,
+        "y": 100
+      },
+      "data": {
+        "label": "Lưu trong vector database",
+        "nodeType": "RAGNode",
+        "parameters": {}
+      },
+      "width": 152,
+      "height": 80
+    },
+    {
+      "id": "vector-db-middle",
+      "type": "customNode",
+      "position": {
+        "x": 550,
+        "y": 250
+      },
+      "data": {
+        "label": "Lưu trong vector database",
+        "nodeType": "RAGNode",
+        "parameters": {}
+      },
+      "width": 152,
+      "height": 80
+    },
+    {
+      "id": "json-file",
+      "type": "customNode",
+      "position": {
+        "x": 350,
+        "y": 370
+      },
+      "data": {
+        "label": "Lưu ngữ cảnh vào file json dưới dạng dict",
+        "nodeType": "OutputNode",
+        "parameters": {}
+      },
+      "width": 152,
+      "height": 97
+    },
+    {
+      "id": "chatbot-db",
+      "type": "customNode",
+      "position": {
+        "x": 1000,
+        "y": 250
+      },
+      "data": {
+        "label": "Kho Dữ liệu cho chatbot",
+        "nodeType": "OutputNode",
+        "parameters": {}
+      },
+      "width": 152,
+      "height": 80
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1-2",
+      "source": "data-input",
+      "target": "condition"
+    },
+    {
+      "id": "e2-3",
+      "source": "condition",
+      "target": "no-path",
+      "label": "Không"
+    },
+    {
+      "id": "e2-4",
+      "source": "condition",
+      "target": "yes-path",
+      "label": "Có"
+    },
+    {
+      "id": "e3-5",
+      "source": "no-path",
+      "target": "vector-db-top",
+      "label": "Bao gồm ngữ cảnh"
+    },
+    {
+      "id": "e4-6",
+      "source": "yes-path",
+      "target": "vector-db-middle"
+    },
+    {
+      "id": "e4-7",
+      "source": "yes-path",
+      "target": "json-file"
+    },
+    {
+      "id": "e5-8",
+      "source": "vector-db-top",
+      "target": "chatbot-db"
+    },
+    {
+      "id": "e6-8",
+      "source": "vector-db-middle",
+      "target": "chatbot-db"
+    },
+    {
+      "id": "e7-8",
+      "source": "json-file",
+      "target": "chatbot-db"
+    }
+  ],
+  "created_at": "2025-06-25T09:54:46.164778",
+  "updated_at": "2025-06-25T09:54:46.164778"
+}

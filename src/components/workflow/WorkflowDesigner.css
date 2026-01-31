@@ -1,0 +1,193 @@
+.workflow-designer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.workflow-container {
+  display: flex;
+  flex: 1;
+  height: calc(100% - 64px);
+  position: relative;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+.reactflow-wrapper {
+  flex: 1;
+  height: 100%;
+}
+
+.workflow-actions {
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  background: #fff;
+  border-bottom: 1px solid #e0ecff;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.12);
+}
+
+.react-flow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.react-flow__pane {
+  cursor: default;
+}
+
+.react-flow__node {
+  cursor: grab;
+}
+
+.react-flow__node.selected {
+  box-shadow: 0 0 0 2px #ff6b6b;
+}
+
+.react-flow__handle {
+  width: 10px;
+  height: 10px;
+  background: #4285f4;
+  border-radius: 50%;
+  border: 1px solid #c7d9fe;
+  transition: background 0.2s ease;
+}
+
+.react-flow__handle:hover {
+  background: #5a9bf8;
+}
+
+.react-flow__edge.selected {
+  stroke: #4285f4;
+  stroke-width: 2;
+}
+
+.react-flow__edge:hover {
+  cursor: pointer;
+  stroke: #5a9bf8;
+}
+
+.react-flow__edge-label {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #22223b;
+  pointer-events: all;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(30, 41, 59, 0.12);
+  backdrop-filter: blur(4px);
+}
+
+.react-flow__edge-label:hover {
+  background: #e0ecff;
+}
+
+.edge-edit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 41, 59, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.edge-edit-modal .modal-content {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  min-width: 360px;
+  box-shadow: 0 6px 16px rgba(30, 41, 59, 0.2);
+  animation: scaleIn 0.2s ease-out;
+}
+
+.edge-edit-modal h3 {
+  margin: 0 0 16px;
+  color: #22223b;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.edge-edit-modal input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #c7d9fe;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #22223b;
+  background: #f3f4f6;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.edge-edit-modal input:focus {
+  outline: none;
+  border-color: #4285f4;
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}
+
+.edge-edit-modal .button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.edge-edit-modal button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.edge-edit-modal button.cancel {
+  background: #6b7280;
+  color: #fff;
+}
+
+.edge-edit-modal button.cancel:hover {
+  background: #4b5563;
+}
+
+.edge-edit-modal button.update {
+  background: linear-gradient(90deg, #4285f4 60%, #5a9bf8 100%);
+  color: #fff;
+}
+
+.edge-edit-modal button.update:hover {
+  background: linear-gradient(90deg, #5a9bf8 0%, #4285f4 100%);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Scrollbar styling */
+.react-flow__pane::-webkit-scrollbar {
+  width: 8px;
+  background: #e0ecff;
+  border-radius: 8px;
+}
+
+.react-flow__pane::-webkit-scrollbar-thumb {
+  background: #c7d9fe;
+  border-radius: 8px;
+}

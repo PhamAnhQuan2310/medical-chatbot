@@ -1,0 +1,120 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.container {
+  width: 100%;
+  max-width: none; 
+  margin: 0;       
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.main-content {
+  display: flex;
+  gap: 20px;
+}
+
+.ticket-list {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-list h2 {
+  margin-top: 0;
+}
+
+.ticket-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ticket {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.ticket.active {
+  background-color: #e9ecef;
+}
+
+.ticket:hover {
+  background-color: #f8f9fa;
+}
+
+.chat-section {
+  flex: 2;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-box {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.message.user {
+  background-color: #d4edda;
+  margin-left: 20%;
+}
+
+.message.agent {
+  background-color: #e9ecef;
+  margin-right: 20%;
+}
+
+.message p {
+  margin: 0;
+}
+
+.message span {
+  font-size: 12px;
+  color: #666;
+}
+
+.chat-form {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.chat-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-form button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,162 @@
+{
+  "id": "system_data_generated_1750842504",
+  "name": "System Generated Data Workflow",
+  "nodes": [
+    {
+      "id": "data_input",
+      "type": "customNode",
+      "position": {
+        "x": 100,
+        "y": 150
+      },
+      "data": {
+        "label": "Dữ liệu",
+        "nodeType": "InputNode",
+        "parameters": {}
+      }
+    },
+    {
+      "id": "condition",
+      "type": "customNode",
+      "position": {
+        "x": 350,
+        "y": 100
+      },
+      "data": {
+        "label": "Có phải dạng bảng không?",
+        "nodeType": "ConditionalNode",
+        "parameters": {}
+      }
+    },
+    {
+      "id": "no_path",
+      "type": "customNode",
+      "position": {
+        "x": 550,
+        "y": 100
+      },
+      "data": {
+        "label": "Dự đoán ngữ cảnh",
+        "nodeType": "IntentClassifierNode",
+        "parameters": {}
+      }
+    },
+    {
+      "id": "yes_path",
+      "type": "customNode",
+      "position": {
+        "x": 350,
+        "y": 250
+      },
+      "data": {
+        "label": "Dự đoán ngữ cảnh",
+        "nodeType": "IntentClassifierNode",
+        "parameters": {}
+      }
+    },
+    {
+      "id": "vector_db_top",
+      "type": "customNode",
+      "position": {
+        "x": 750,
+        "y": 100
+      },
+      "data": {
+        "label": "Lưu trong vector database",
+        "nodeType": "RAGNode",
+        "parameters": {}
+      }
+    },
+    {
+      "id": "vector_db_middle",
+      "type": "customNode",
+      "position": {
+        "x": 550,
+        "y": 250
+      },
+      "data": {
+        "label": "Lưu trong vector database",
+        "nodeType": "RAGNode",
+        "parameters": {}
+      }
+    },
+    {
+      "id": "json_file",
+      "type": "customNode",
+      "position": {
+        "x": 350,
+        "y": 370
+      },
+      "data": {
+        "label": "Lưu ngữ cảnh vào file json dưới dạng dict",
+        "nodeType": "OutputNode",
+        "parameters": {}
+      }
+    },
+    {
+      "id": "chatbot_db",
+      "type": "customNode",
+      "position": {
+        "x": 1000,
+        "y": 250
+      },
+      "data": {
+        "label": "Kho Dữ liệu cho chatbot",
+        "nodeType": "OutputNode",
+        "parameters": {}
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1-2",
+      "source": "data_input",
+      "target": "condition"
+    },
+    {
+      "id": "e2-3",
+      "source": "condition",
+      "target": "no_path",
+      "label": "Không"
+    },
+    {
+      "id": "e2-4",
+      "source": "condition",
+      "target": "yes_path",
+      "label": "Có"
+    },
+    {
+      "id": "e3-5",
+      "source": "no_path",
+      "target": "vector_db_top",
+      "label": "Bao gồm ngữ cảnh"
+    },
+    {
+      "id": "e4-6",
+      "source": "yes_path",
+      "target": "vector_db_middle"
+    },
+    {
+      "id": "e4-7",
+      "source": "yes_path",
+      "target": "json_file"
+    },
+    {
+      "id": "e5-8",
+      "source": "vector_db_top",
+      "target": "chatbot_db"
+    },
+    {
+      "id": "e6-8",
+      "source": "vector_db_middle",
+      "target": "chatbot_db"
+    },
+    {
+      "id": "e7-8",
+      "source": "json_file",
+      "target": "chatbot_db"
+    }
+  ],
+  "created_at": "2025-06-25T16:08:24.514790",
+  "updated_at": "2025-06-25T16:08:24.514790"
+}

@@ -1,0 +1,102 @@
+
+.workflow-toolbar {
+  height: 64px;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid #e0ecff;
+  box-shadow: 0 2px 8px rgba(30, 41, 59, 0.12);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  backdrop-filter: blur(8px);
+}
+
+.workflow-name input {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border: 1px solid #c7d9fe;
+  border-radius: 8px;
+  width: 320px;
+  outline: none;
+  background: #f3f4f6;
+  color: #22223b;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.workflow-name input:focus {
+  border-color: #4285f4;
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}
+
+.workflow-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.workflow-button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.workflow-button.new {
+  background: #fff;
+  color: #22223b;
+  border: 1px solid #c7d9fe;
+  box-shadow: 0 2px 4px rgba(30, 41, 59, 0.12);
+}
+
+.workflow-button.new:hover {
+  background: #e0ecff;
+  transform: translateY(-1px);
+}
+
+.workflow-button.save {
+  background: linear-gradient(90deg, #4285f4 60%, #5a9bf8 100%);
+  color: #fff;
+}
+
+.workflow-button.save:hover {
+  background: linear-gradient(90deg, #5a9bf8 0%, #4285f4 100%);
+  transform: translateY(-1px);
+}
+
+.workflow-button.run {
+  background: linear-gradient(90deg, #22c55e 60%, #34d399 100%);
+  color: #fff;
+}
+
+.workflow-button.run:hover {
+  background: linear-gradient(90deg, #34d399 0%, #22c55e 100%);
+  transform: translateY(-1px);
+}
+
+.workflow-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.workflow-select {
+  padding: 8px 32px 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #c7d9fe;
+  background: #f3f4f6;
+  appearance: menulist;
+  min-width: 180px;
+  font-size: 14px;
+  color: #22223b;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.workflow-select:focus {
+  outline: none;
+  border-color: #4285f4;
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}

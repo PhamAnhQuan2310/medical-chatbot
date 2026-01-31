@@ -1,0 +1,115 @@
+
+.workflow-sidebar {
+  width: 260px;
+  background: rgba(255, 255, 255, 0.85);
+  border-left: 1px solid #e0ecff;
+  height: 100%;
+  overflow-y: auto;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  box-shadow: -2px 0 12px rgba(30, 41, 59, 0.12);
+  backdrop-filter: blur(8px);
+}
+
+.sidebar-header {
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4285f4;
+  border-bottom: 1px solid #e0ecff;
+  text-align: center;
+}
+
+.sidebar-content {
+  padding: 16px;
+}
+
+.sidebar-content.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 50px);
+  color: #6b7280;
+  text-align: center;
+  padding: 24px;
+  font-size: 14px;
+}
+
+.property-group {
+  margin-bottom: 16px;
+}
+
+.property-group label {
+  display: block;
+  font-size: 12px;
+  color: #4b5563;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.property-input,
+.property-select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c7d9fe;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #22223b;
+  background: #f3f4f6;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.property-input:focus,
+.property-select:focus {
+  outline: none;
+  border-color: #4285f4;
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}
+
+.property-value {
+  font-size: 14px;
+  padding: 10px;
+  background: #e0ecff;
+  border-radius: 8px;
+  color: #22223b;
+}
+
+.property-checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: #4285f4;
+  cursor: pointer;
+}
+
+.delete-node-btn {
+  background: linear-gradient(90deg, #ff6b6b 60%, #ff8787 100%);
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.delete-node-btn:hover {
+  background: linear-gradient(90deg, #ff8787 0%, #ff6b6b 100%);
+}
+
+.delete-node-btn:active {
+  background: #e63946;
+}
+
+/* Scrollbar styling */
+.workflow-sidebar::-webkit-scrollbar {
+  width: 8px;
+  background: #e0ecff;
+  border-radius: 8px;
+}
+
+.workflow-sidebar::-webkit-scrollbar-thumb {
+  background: #c7d9fe;
+  border-radius: 8px;
+}

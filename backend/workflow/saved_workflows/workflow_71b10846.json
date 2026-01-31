@@ -1,0 +1,141 @@
+{
+  "id": "workflow_71b10846",
+  "name": "WorkFlow mặc định",
+  "nodes": [
+    {
+      "id": "input-node",
+      "type": "customNode",
+      "position": {
+        "x": 100,
+        "y": 200
+      },
+      "data": {
+        "label": "Câu hỏi",
+        "nodeType": "InputNode",
+        "parameters": {}
+      },
+      "width": 152,
+      "height": 63
+    },
+    {
+      "id": "decision-node",
+      "type": "customNode",
+      "position": {
+        "x": 350,
+        "y": 200
+      },
+      "data": {
+        "label": "Có truy vấn và ra kết quả SQL được không?",
+        "nodeType": "ConditionalNode",
+        "parameters": {
+          "condition_type": "contains",
+          "value_path": "query",
+          "comparison_value": "SELECT"
+        }
+      },
+      "width": 152,
+      "height": 97
+    },
+    {
+      "id": "sql-result-node",
+      "type": "customNode",
+      "position": {
+        "x": 600,
+        "y": 180
+      },
+      "data": {
+        "label": "Kết hợp với prompt theo context và trả về kết quả",
+        "nodeType": "SQLNode",
+        "parameters": {
+          "db_path": "database/main.db"
+        }
+      },
+      "width": 152,
+      "height": 97
+    },
+    {
+      "id": "render-output-node",
+      "type": "customNode",
+      "position": {
+        "x": 850,
+        "y": 180
+      },
+      "data": {
+        "label": "Kết quả được đưa cho LLM và sinh ra tự nhiên",
+        "nodeType": "OutputNode",
+        "parameters": {
+          "output_format": "text"
+        }
+      },
+      "width": 152,
+      "height": 97
+    },
+    {
+      "id": "semantic-search-node",
+      "type": "customNode",
+      "position": {
+        "x": 350,
+        "y": 400
+      },
+      "data": {
+        "label": "Sử dụng semantic để tìm kiếm trong vector databse",
+        "nodeType": "RAGNode",
+        "parameters": {
+          "collection_name": "documents",
+          "top_k": 5
+        }
+      },
+      "width": 152,
+      "height": 97
+    },
+    {
+      "id": "files-output-node",
+      "type": "customNode",
+      "position": {
+        "x": 600,
+        "y": 400
+      },
+      "data": {
+        "label": "Kết quả được trả về từ các file tài liệu có sẵn",
+        "nodeType": "OutputNode",
+        "parameters": {
+          "output_format": "json"
+        }
+      },
+      "width": 152,
+      "height": 97
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1-2",
+      "source": "input-node",
+      "target": "decision-node"
+    },
+    {
+      "id": "e2-3",
+      "source": "decision-node",
+      "target": "sql-result-node",
+      "label": "Có"
+    },
+    {
+      "id": "e3-4",
+      "source": "sql-result-node",
+      "target": "render-output-node",
+      "label": "Render"
+    },
+    {
+      "id": "e2-5",
+      "source": "decision-node",
+      "target": "semantic-search-node",
+      "label": "Không"
+    },
+    {
+      "id": "e5-6",
+      "source": "semantic-search-node",
+      "target": "files-output-node"
+    }
+  ],
+  "created_at": "2025-06-25T11:24:06.215654",
+  "updated_at": "2025-06-25T11:24:06.215654"
+}

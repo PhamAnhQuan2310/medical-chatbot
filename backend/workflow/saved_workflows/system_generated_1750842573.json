@@ -1,0 +1,115 @@
+{
+  "id": "system_generated_1750842573",
+  "name": "System Generated Workflow",
+  "nodes": [
+    {
+      "id": "input_1",
+      "type": "customNode",
+      "position": {
+        "x": 100,
+        "y": 100
+      },
+      "data": {
+        "label": "Đầu vào người dùng",
+        "nodeType": "InputNode",
+        "parameters": {
+          "description": "Nhận câu hỏi từ người dùng"
+        }
+      }
+    },
+    {
+      "id": "intent_1",
+      "type": "customNode",
+      "position": {
+        "x": 300,
+        "y": 100
+      },
+      "data": {
+        "label": "Phân loại ý định",
+        "nodeType": "IntentClassifierNode",
+        "parameters": {
+          "description": "Phân loại ý định người dùng"
+        }
+      }
+    },
+    {
+      "id": "rag_1",
+      "type": "customNode",
+      "position": {
+        "x": 500,
+        "y": 50
+      },
+      "data": {
+        "label": "RAG Retrieval",
+        "nodeType": "RAGNode",
+        "parameters": {
+          "description": "Tìm kiếm thông tin từ knowledge base"
+        }
+      }
+    },
+    {
+      "id": "sql_1",
+      "type": "customNode",
+      "position": {
+        "x": 500,
+        "y": 150
+      },
+      "data": {
+        "label": "SQL Query",
+        "nodeType": "SQLNode",
+        "parameters": {
+          "description": "Truy vấn dữ liệu từ database"
+        }
+      }
+    },
+    {
+      "id": "output_1",
+      "type": "customNode",
+      "position": {
+        "x": 700,
+        "y": 150
+      },
+      "data": {
+        "label": "Đầu ra cho người dùng",
+        "nodeType": "OutputNode",
+        "parameters": {
+          "description": "Trả lời cho người dùng"
+        }
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_input_intent",
+      "source": "input_1",
+      "target": "intent_1",
+      "label": "Câu hỏi"
+    },
+    {
+      "id": "e_intent_rag",
+      "source": "intent_1",
+      "target": "rag_1",
+      "label": "Câu hỏi tổng quát"
+    },
+    {
+      "id": "e_intent_sql",
+      "source": "intent_1",
+      "target": "sql_1",
+      "label": "Câu hỏi dữ liệu"
+    },
+    {
+      "id": "e_rag_output",
+      "source": "rag_1",
+      "target": "output_1",
+      "label": "Kết quả RAG"
+    },
+    {
+      "id": "e_sql_output",
+      "source": "sql_1",
+      "target": "output_1",
+      "label": "Kết quả SQL"
+    }
+  ],
+  "created_at": "2025-06-25T16:09:33.525119",
+  "updated_at": "2025-06-25T16:09:33.525119"
+}
