@@ -4,7 +4,7 @@ A web-based chatbot developed as a university project to support healthcare info
 
 The system includes a medical question-answering chatbot for users and a separate workflow for hospital staff to search structured and document-based data.
 
-## Main Features
+# Main Features
 
 - Medical question answering using a fine-tuned Qwen-2.5-0.5B-Instruct model.
 - RAG-based retrieval for document data using ChromaDB.
@@ -17,7 +17,7 @@ The system includes a medical question-answering chatbot for users and a separat
 - User authentication, Admin and Customer Service pages.
 - Display generated SQL queries for structured-data responses.
 
-## Tech Stack
+# Tech Stack
 
 **Frontend:** React, TypeScript, Vite, Axios, React Router, Recharts  
 **Backend:** Python, FastAPI  
