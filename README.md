@@ -1,69 +1,31 @@
-# React + TypeScript + Vite
+# Medical Chatbot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based chatbot developed as a university project to support healthcare information lookup and internal hospital data retrieval.
 
-Currently, two official plugins are available:
+The system includes a medical question-answering chatbot for users and a separate workflow for hospital staff to search structured and document-based data.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Main Features
 
-## Expanding the ESLint configuration
+- Medical question answering using a fine-tuned Qwen-2.5-0.5B-Instruct model.
+- RAG-based retrieval for document data using ChromaDB.
+- Query structured datasets and return results as tables or charts.
+- Upload and manage documents used by the internal chatbot.
+- Speech-to-Text input through the browser microphone.
+- OCR input for extracting text from uploaded images.
+- Chat history with multiple conversation sessions.
+- Vietnamese / English interface switching.
+- User authentication, Admin and Customer Service pages.
+- Display generated SQL queries for structured-data responses.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Frontend:** React, TypeScript, Vite, Axios, React Router, Recharts  
+**Backend:** Python, FastAPI  
+**AI / NLP:** Qwen-2.5-0.5B-Instruct, LoRA, RAG  
+**Vector Database:** ChromaDB
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Project Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- `src/` - React frontend and UI components
+- `backend/` - API, chatbot, RAG and data processing modules
+- `public/`, `static/` - static assets
